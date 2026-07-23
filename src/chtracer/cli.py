@@ -40,8 +40,8 @@ def cmd_trace(args) -> int:
         write_officer_csv(links, out / "officer_overlap.csv")
         if links:
             print(f"\n{len(links)} officer(s) appearing at 2+ entities:")
-            for l in links[:10]:
-                print(f"  {l.name:<40} {l.company_count} companies")
+            for link in links[:10]:
+                print(f"  {link.name:<40} {link.company_count} companies")
 
     print(f"\n{len(trace.entities)} entities, {len(trace.edges)} relationships")
     for reason, count in sorted(trace.terminations().items()):

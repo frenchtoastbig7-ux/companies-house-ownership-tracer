@@ -102,5 +102,5 @@ def cross_reference_officers(
                 }
             )
 
-    hits = [l for l in index.values() if l.company_count >= min_companies]
-    return sorted(hits, key=lambda l: (-l.company_count, l.normalised))
+    hits = [entry for entry in index.values() if entry.company_count >= min_companies]
+    return sorted(hits, key=lambda entry: (-entry.company_count, entry.normalised))

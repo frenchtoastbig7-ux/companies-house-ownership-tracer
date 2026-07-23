@@ -27,3 +27,9 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+
+[tool.ruff.lint]
+# Pinned explicitly rather than relying on ruff's defaults, so a new ruff
+# release cannot add a rule and break CI on an unchanged codebase.
+#   E4 imports, E7 statement style, E9 syntax/IO errors, F pyflakes
+select = ["E4", "E7", "E9", "F"]

@@ -10,3 +10,8 @@ output/
 .pytest_cache/
 .ruff_cache/
 .env
+
+# private working notes — never commit
+*.local.md
+HANDOFF.local.md
+CLAUDE.md

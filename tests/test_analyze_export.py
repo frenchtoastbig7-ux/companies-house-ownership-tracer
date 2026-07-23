@@ -38,27 +38,27 @@ class TestOfficerCrossReference(unittest.TestCase):
     def test_finds_officer_at_multiple_companies(self):
         client, trace = traced()
         links = cross_reference_officers(client, trace)
-        names = {l.normalised for l in links}
+        names = {link.normalised for link in links}
         self.assertIn(normalise_person_name("Priya Patel"), names)
 
     def test_matches_across_name_format_differences(self):
         client, trace = traced()
         links = cross_reference_officers(client, trace)
-        patel = next(l for l in links if "PATEL" in l.normalised)
+        patel = next(link for link in links if "PATEL" in link.normalised)
         # 'Mrs Priya PATEL' at 00000001 and 'Patel, Priya' at 00000004
         self.assertEqual(patel.company_count, 2)
 
     def test_resigned_officers_excluded_by_default(self):
         client, trace = traced()
         links = cross_reference_officers(client, trace, min_companies=1)
-        self.assertFalse(any("OSBORNE" in l.normalised for l in links))
+        self.assertFalse(any("OSBORNE" in link.normalised for link in links))
 
     def test_confidence_flags_missing_dob(self):
         client, trace = traced()
         links = cross_reference_officers(client, trace)
-        for l in links:
-            expected = "high" if l.dob else "low"
-            self.assertTrue(l.to_row()["confidence"].startswith(expected))
+        for link in links:
+            expected = "high" if link.dob else "low"
+            self.assertTrue(link.to_row()["confidence"].startswith(expected))
 
 
 class TestExport(unittest.TestCase):

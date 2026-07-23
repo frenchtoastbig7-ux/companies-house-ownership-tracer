@@ -45,7 +45,7 @@ def write_csv(trace: Trace, directory: str | Path, prefix: str = "") -> list[Pat
 
 def write_officer_csv(links: list[OfficerLink], path: str | Path) -> Path:
     p = Path(path)
-    _write_rows(p, [l.to_row() for l in links])
+    _write_rows(p, [link.to_row() for link in links])
     return p
 
 
