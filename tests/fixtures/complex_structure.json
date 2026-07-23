@@ -1,0 +1,171 @@
+{
+  "_comment": "Synthetic structure. Shape mirrors patterns seen on the real register: a trading company held by a UK holdco, which is held partly by an offshore parent and partly by an individual; a circular cross-holding between two subsidiaries; and a company that declares no PSC.",
+
+  "/company/00000001": {
+    "company_name": "ALPHA TRADING LIMITED",
+    "company_number": "00000001",
+    "company_status": "active",
+    "date_of_creation": "2011-03-04",
+    "type": "ltd",
+    "jurisdiction": "england-wales",
+    "sic_codes": ["46900"]
+  },
+  "/company/00000001/persons-with-significant-control": {
+    "items": [
+      {
+        "kind": "corporate-entity-person-with-significant-control",
+        "name": "BETA HOLDINGS LIMITED",
+        "notified_on": "2016-04-06",
+        "natures_of_control": ["ownership-of-shares-75-to-100-percent"],
+        "identification": {
+          "registration_number": "2",
+          "country_registered": "England",
+          "place_registered": "Companies House",
+          "legal_form": "Private Limited Company"
+        }
+      }
+    ],
+    "total_results": 1
+  },
+
+  "/company/00000002": {
+    "company_name": "BETA HOLDINGS LIMITED",
+    "company_number": "00000002",
+    "company_status": "active",
+    "date_of_creation": "2009-08-19",
+    "type": "ltd",
+    "jurisdiction": "england-wales"
+  },
+  "/company/00000002/persons-with-significant-control": {
+    "items": [
+      {
+        "kind": "individual-person-with-significant-control",
+        "name": "Mr John Andrew Smith",
+        "nationality": "British",
+        "country_of_residence": "England",
+        "date_of_birth": {"month": 6, "year": 1971},
+        "notified_on": "2016-04-06",
+        "natures_of_control": ["ownership-of-shares-25-to-50-percent"]
+      },
+      {
+        "kind": "corporate-entity-person-with-significant-control",
+        "name": "GAMMA INTERNATIONAL SA",
+        "notified_on": "2016-04-06",
+        "natures_of_control": ["ownership-of-shares-25-to-50-percent"],
+        "identification": {
+          "registration_number": "B-118293",
+          "country_registered": "Luxembourg",
+          "place_registered": "Registre de Commerce et des Societes",
+          "legal_form": "Societe Anonyme"
+        }
+      },
+      {
+        "kind": "corporate-entity-person-with-significant-control",
+        "name": "DELTA NOMINEES LIMITED",
+        "notified_on": "2017-01-11",
+        "ceased_on": "2020-05-30",
+        "natures_of_control": ["ownership-of-shares-25-to-50-percent"],
+        "identification": {
+          "registration_number": "4",
+          "country_registered": "England",
+          "place_registered": "Companies House",
+          "legal_form": "Private Limited Company"
+        }
+      }
+    ],
+    "total_results": 3
+  },
+
+  "/company/00000004": {
+    "company_name": "DELTA NOMINEES LIMITED",
+    "company_number": "00000004",
+    "company_status": "active",
+    "date_of_creation": "2004-02-02",
+    "type": "ltd"
+  },
+  "/company/00000004/persons-with-significant-control": {
+    "items": [
+      {
+        "kind": "corporate-entity-person-with-significant-control",
+        "name": "ALPHA TRADING LIMITED",
+        "notified_on": "2016-07-01",
+        "natures_of_control": ["ownership-of-shares-75-to-100-percent"],
+        "identification": {
+          "registration_number": "00000001",
+          "country_registered": "United Kingdom",
+          "place_registered": "Companies House",
+          "legal_form": "Private Limited Company"
+        }
+      }
+    ],
+    "total_results": 1
+  },
+
+  "/company/00000005": {
+    "company_name": "EPSILON DORMANT LIMITED",
+    "company_number": "00000005",
+    "company_status": "active",
+    "date_of_creation": "2018-11-30",
+    "type": "ltd"
+  },
+  "/company/00000005/persons-with-significant-control": {
+    "items": [],
+    "total_results": 0
+  },
+  "/company/00000005/persons-with-significant-control-statements": {
+    "items": [
+      {
+        "statement": "no-individual-or-entity-with-signficant-control",
+        "notified_on": "2019-01-04"
+      }
+    ],
+    "total_results": 1
+  },
+
+  "/company/00000001/officers": {
+    "items": [
+      {
+        "name": "SMITH, John Andrew",
+        "officer_role": "director",
+        "appointed_on": "2011-03-04",
+        "date_of_birth": {"month": 6, "year": 1971}
+      },
+      {
+        "name": "Mrs Priya PATEL",
+        "officer_role": "director",
+        "appointed_on": "2015-09-01",
+        "date_of_birth": {"month": 2, "year": 1980}
+      }
+    ],
+    "total_results": 2
+  },
+  "/company/00000002/officers": {
+    "items": [
+      {
+        "name": "Mr John Andrew Smith",
+        "officer_role": "director",
+        "appointed_on": "2009-08-19",
+        "date_of_birth": {"month": 6, "year": 1971}
+      },
+      {
+        "name": "OSBORNE, Richard",
+        "officer_role": "director",
+        "appointed_on": "2012-01-01",
+        "resigned_on": "2018-06-30",
+        "date_of_birth": {"month": 11, "year": 1965}
+      }
+    ],
+    "total_results": 2
+  },
+  "/company/00000004/officers": {
+    "items": [
+      {
+        "name": "Patel, Priya",
+        "officer_role": "director",
+        "appointed_on": "2016-01-01",
+        "date_of_birth": {"month": 2, "year": 1980}
+      }
+    ],
+    "total_results": 1
+  }
+}
