@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chtracer"
+version = "0.1.0"
+description = "Trace UK beneficial ownership chains via the Companies House API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+graph = ["networkx>=3.0"]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.scripts]
+chtracer = "chtracer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# Pinned explicitly rather than relying on ruff's defaults, so a new ruff
+# release cannot add a rule and break CI on an unchanged codebase.
+#   E4 imports, E7 statement style, E9 syntax/IO errors, F pyflakes
+select = ["E4", "E7", "E9", "F"]
